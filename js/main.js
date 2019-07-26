@@ -1,6 +1,5 @@
 'use strict';
 
-
 const app = document.querySelector ('.app');
 const updateBtn = document.querySelector ('.app__update');
 const selectMood = document.querySelector ('.app__mood');
@@ -26,6 +25,11 @@ function updateMood () {
     }
 }
 
+function changeFace () {
+    face.innerHTML = selectMood.value;
+}
+
+selectMood.addEventListener ('change', changeFace);
 updateBtn.addEventListener('click', updateMood);
 
 
